@@ -1,0 +1,91 @@
+#note-list {
+  max-width: 68rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 5rem auto;
+}
+
+#note-list a {
+  text-decoration: none;
+}
+blockquote {
+  padding: 20px;
+  box-shadow:
+    inset 0 -3em 3em rgba(0, 200, 0, 0.3),
+    0 0 0 2px white,
+    0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
+}
+
+.note {
+  width: 30%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 4px;
+  animation: fade-blur-in 1s ease-out forwards;
+  transition: all 0.3s ease-out;
+}
+
+.note:hover {
+  background-color: var(--color-primary-1000);
+  transform: translateY(-0.25rem);
+}
+
+.note-meta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-primary-300);
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-primary-300);
+}
+
+.note h2 {
+  margin: 0 0 0.5rem 0;
+  color: #000;
+}
+
+.note p {
+  margin: 0;
+  color: #000;;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+
+.top-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 1rem;
+}
+
+.add-new-note{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0.5rem;
+}
+
+.add-note-icon{
+  width: 50px; /* Adjust the width based on your image */
+  height: 50px; /* Adjust the height based on your image */
+  margin-bottom: 1px;
+}
+
+
+.empty-folder {
+  text-align: center;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String    @id @default(uuid())
+  username     String    @unique
+  email        String    @unique
+  passwordHash String
+  notes        Note[]
+  subjects     Subject[]
+}
+
+model Subject {
+  id      String   @id @default(uuid())
+  name    String
+  folders Folder[]
+  user    User     @relation(fields: [userId], references: [id])
+  userId  String
+}
+
+model Folder {
+  id         String   @id @default(uuid())
+  name       String
+  subject    Subject  @relation(fields: [subjectId], references: [id])
+  subjectId  String
+  parent     Folder?  @relation("Subfolders", fields: [parentId], references: [id])
+  parentId   String?
+  subfolders Folder[] @relation("Subfolders")
+  notes      Note[]
+}
+
+model Note {
+  id       String @id @default(uuid())
+  userId   String
+  user     User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  folderId String
+  folder   Folder @relation(fields: [folderId], references: [id],onDelete: Cascade)
+  title    String
+  keyword  String
+  content  String
+}

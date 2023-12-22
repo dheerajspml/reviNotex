@@ -1,0 +1,132 @@
+#note-details {
+  max-width: 50rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align:left;
+  color: var(--color-primary-50);
+  background-color: #fff;
+  border-radius: 24px;
+  animation: fade-slide-in 1s ease-out forwards;
+  position: relative;
+}
+
+blockquote {
+  padding: 20px;
+  box-shadow:
+    inset 0 -3em 3em rgba(0, 200, 0, 0.3),
+    0 0 0 2px white,
+    0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
+}
+
+
+.top-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 1rem;
+}
+
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+}
+
+.bottom-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 1rem;
+}
+
+.bottom-right {
+  position:absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
+}
+
+#note-details header a {
+  color: #000000d7;
+  text-decoration:none;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+#note-details header .back-arrow {
+  margin-right: 0.5rem;
+}
+
+#note-details header a:hover {
+  color: var(--color-primary-500);
+}
+
+#note-details .delete-link {
+  color: var(--color-delete); /* Define color for delete link */
+}
+
+#note-details .delete-icon {
+  margin-left: 0.25rem;
+}
+
+#note-details .edit-link {
+  color: var(--color-edit); /* Define color for edit link */
+}
+
+#note-details-content {
+  color: #000;
+  text-decoration:none;
+  font-size: 1.15rem;
+  white-space: pre-wrap;
+}
+
+.highlighted{
+  background-color: yellow;
+}
+.edit-icon{
+  width: 30px; /* Adjust the width based on your image */
+  height: 30px; /* Adjust the height based on your image */
+  margin-bottom: 1px;
+}
+.delete-icon{
+  width: 20px; /* Adjust the width based on your image */
+  height: 20px; /* Adjust the height based on your image */
+  margin-bottom: 1px;
+}
+.title{
+  color: #000;
+}
+
+@media screen and (max-width: 600px) {
+  #note-details {
+    max-width: 30rem;
+    padding: 1rem;
+  }
+  #note-details header {
+    text-align: center;
+  }
+  #note-details .title {
+    font-size: 1.5rem; /* Adjust font size for title */
+    margin-bottom: 0.5rem;
+  }
+  #note-details-content {
+    font-size: 1rem; /* Adjust font size for content */
+  }
+  .edit-icon, .delete-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .edit-icon {
+    margin-right: 0.5rem;
+  }
+  .top-left, .top-right, .bottom-left, .bottom-right {
+    position: static;
+    margin: 1rem 0;
+  }
+}
+/* Font family for note content */
+#note-details-content {
+  font-family:  inherit;
+}
