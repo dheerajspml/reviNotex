@@ -4,7 +4,8 @@
     padding: 2rem;
     border-radius: 6px;
     background-color: #fff;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(3, 3, 3, 0.978);
+    font-weight: bolder;
   }
   
   #note-form label,
@@ -25,7 +26,7 @@
     width: 100%;
     font: inherit;
     padding: 0.5rem 0.25rem;
-    background-color: #f2eaea;
+    background-color:#eeecec;
     border: none;
     border-radius: 2px;
     color: #000;
@@ -58,14 +59,14 @@
   }
   
   .bottom-left {
-    position: absolute;
+    position:relative;
     left: 0;
     bottom: 0;
     margin: 1rem;
   }
   
   .bottom-right {
-    position:absolute;
+    position:relative;
   
     right: 0;
     bottom: 0;

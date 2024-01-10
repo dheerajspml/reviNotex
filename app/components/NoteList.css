@@ -11,18 +11,11 @@
 #note-list a {
   text-decoration: none;
 }
-blockquote {
-  padding: 20px;
-  box-shadow:
-    inset 0 -3em 3em rgba(0, 200, 0, 0.3),
-    0 0 0 2px white,
-    0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
-}
 
 .note {
   width: 30%;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #f3eded0a;
+  box-shadow: 0 2px 4px rgba(7, 6, 6, 0.978);
   padding: 1.5rem;
   border-radius: 4px;
   animation: fade-blur-in 1s ease-out forwards;
@@ -30,23 +23,10 @@ blockquote {
 }
 
 .note:hover {
-  background-color: var(--color-primary-1000);
+  background-color: #9c9a9a;
   transform: translateY(-0.25rem);
 }
 
-.note-meta {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--color-primary-300);
-  font-weight: bold;
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
-  border-bottom: 2px solid var(--color-primary-300);
-}
 
 .note h2 {
   margin: 0 0 0.5rem 0;
@@ -68,6 +48,7 @@ blockquote {
   left: 0;
   top: 0;
   margin: 1rem;
+  color: #000;
 }
 
 .add-new-note{
@@ -78,8 +59,8 @@ blockquote {
 }
 
 .add-note-icon{
-  width: 50px; /* Adjust the width based on your image */
-  height: 50px; /* Adjust the height based on your image */
+  width: 50px; 
+  height: 50px;
   margin-bottom: 1px;
 }
 
@@ -88,4 +69,39 @@ blockquote {
   text-align: center;
   margin-top: 50vh;
   transform: translateY(-50%);
+}
+.sub_folder-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  list-style: none;
+  margin: 2rem auto;
+  margin-left: 2rem;
+}
+.sub_folder-name{
+  color: #000;
+}
+.sub_folder-name:hover {
+  background-color: #e7dede;
+}
+
+
+.add-folder-icon {
+  width: 30px; 
+  height: 30px; 
+  margin-bottom: 1px;
+}
+.add-folder{
+ margin-top: 20px;
+ position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
+}
+.back-arrow{
+  color: #000;
+  font-weight: bold;
+  
 }

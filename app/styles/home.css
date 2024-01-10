@@ -1,21 +1,62 @@
 #content {
   text-align: center;
-  color: var(--color-primary-10);
 }
-
-#cta {
+/* Styles for the search container */
+.search-container {
   margin-top: 2rem;
-}
+  text-align: center;
+  position: absolute;
+  left:40%;
+  top: 0;
+  margin: 1rem;
 
-#cta a {
-  text-decoration: none;
+
+}
+/* Styles for the search form */
+.search-container form {
+  display: inline-block;
+}
+.search-container input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid var(--color-secondary-100);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.search-container button {
+  padding: 0.5rem 1rem;
   background-color: var(--color-secondary-100);
   color: var(--color-primary-800);
-  padding: 0.5rem 2rem;
+  border: 1px solid var(--color-secondary-100);
   border-radius: 4px;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
-
-#cta a:hover {
+.search-container button:hover {
+  background-color: var(--color-secondary-200);
+  border: 1px solid var(--color-secondary-200);
+}
+/* Styles for search results */
+#search-results {
+  margin-top: 2rem;
+}
+#search-results h2 {
+  color: var(--color-primary-800);
+}
+#search-results ul {
+  list-style: none;
+  padding: 0;
+}
+#search-results li {
+  margin-bottom: 1rem;
+}
+#search-results a {
+  text-decoration: none;
+  background-color: var(--color-secondary-100);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+#search-results a:hover {
   background-color: var(--color-secondary-200);
 }

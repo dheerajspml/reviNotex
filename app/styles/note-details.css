@@ -4,10 +4,12 @@
   padding: 2rem;
   text-align:left;
   color: var(--color-primary-50);
-  background-color: #fff;
+  background-color:#eeecec;
   border-radius: 24px;
   animation: fade-slide-in 1s ease-out forwards;
   position: relative;
+  box-shadow: 0 2px 4px rgba(3, 3, 3, 0.978);
+  font-weight: bolder;
 }
 
 blockquote {

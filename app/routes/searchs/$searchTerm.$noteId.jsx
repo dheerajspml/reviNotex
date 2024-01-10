@@ -1,16 +1,17 @@
-import { json } from "@remix-run/node";
+import { json, redirect } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
-import { useNavigate } from "react-router-dom";
 import styles from "~/styles/note-details.css";
 import { db } from "~/utils/db.server";
 import { useParams } from "@remix-run/react";
 import editIcon from "~/icons/edit_icon.png";
-import deleteIcon from "~/icons/delete-icon.png";
 
 export default function NoteDetailsPage() {
-  const note = useLoaderData();
+  const data = useLoaderData();
+  const note=data.selectedNote;
+  const folderId=data.selectedFolderId;
+  const subjectId=data.selectedSubjectId;
   const params = useParams();
-
+  const searchTerm = params.searchTerm;
   // Function to highlight keywords in content
   const highlightKeywords = (content, keywords) => {
     if (!keywords || typeof keywords !== "string" || keywords.trim() === "") {
@@ -38,14 +39,9 @@ export default function NoteDetailsPage() {
     <div>
       <main id="note-details">
         <header>
-          <nav className="top-left">
-            <Link to={`/myNotes/${params.subjectId}/${params.folderId}`}>
-              <span className="back-arrow">← Back</span>
-            </Link>
-          </nav>
           <nav className="top-right">
             <Link
-              to={`/myNotes/${params.subjectId}/${params.folderId}/${params.noteId}/edit`}
+              to={`/myNote/${subjectId}/${folderId}/${note.id}/edit`}
             >
               <img src={editIcon} alt="edit Icon" className="edit-icon" />
             </Link>
@@ -53,31 +49,32 @@ export default function NoteDetailsPage() {
           <h1 className="title">{note.title}</h1>
           <hr></hr>
         </header>
-        {highlightKeywords(note.content, note.keyword)}
-        <nav className="bottom-right">
-          <Link
-            to={`/myNotes/${params.subjectId}/${params.folderId}/${params.noteId}/delete`}
-          >
-            <img src={deleteIcon} alt="delete Icon" className="delete-icon" />
-          </Link>
-        </nav>
+        {highlightKeywords(note.content, searchTerm)}
       </main>
     </div>
   );
 }
+
 export const loader = async ({ params }) => {
   const notes = await db.note.findMany();
   const noteId = params.noteId;
   const selectedNote = notes.find((note) => note.id === noteId);
-
+  const selectedFolderId = selectedNote.folderId;
+  const selectedSubject = await db.folder.findUnique({
+    where: { id: selectedFolderId },
+  });
+  const selectedSubjectId=selectedSubject.id
   if (!selectedNote) {
     throw json(
       { message: "Could not find note for id " + noteId },
       { status: 404 }
     );
   }
-
-  return selectedNote;
+  return {
+    selectedNote:selectedNote,
+    selectedFolderId:selectedFolderId,
+    selectedSubjectId:selectedSubjectId,
+  };
 };
 
 export function links() {

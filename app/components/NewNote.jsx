@@ -17,7 +17,7 @@ function NewNote() {
   return (
     <div>
       <nav className="top-left">
-        <Link to={`/myNotes/${params.subjectId}/${params.folderId}`}>
+        <Link to={`/myNote/${params.subjectId}/${params.folderId}`}>
           <span className="back-arrow">← Back</span>
         </Link>
       </nav>

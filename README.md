@@ -1,53 +1,24 @@
-# Welcome to Remix!
+# Welcome to ReviNotex!
+ This is better way of keeping track of your note. It will help you in your revision and your exam prepration.
+ This have also functionality to Highlight some key word.This also provide quick search functionality 
+ by searching any word or keyword or topic name present in notes. This ReviNotex include the functionality to create folder of subject and inside subject folder and inside folder subfolder or creating note. You can edit or delete note at any time. Be sure while deleting note this can not be restore.
 
-- [Remix Docs](https://remix.run/docs)
+# How to use this.
+ step1. Create an account with username, email and password.
+ Step2. Login with your user Name and password.
+ step3. click on myNotes
+ step4. add subject name and go inside subject folder
+ step5. add folder name and go inside folder
+ step6. either click on add note button or add new subfolder.
+ step.7. If you have cicked on add note button add title of note, Add content of note according to highlight content enter keyword from content.
+ step8. Clicked Add Note button below the form.
+ Now you have created you first note.
 
-## Development
+# How to see noteDetail
+ click in the middle of any note from your note list notelist .
 
-From your terminal:
+# Searching Functionality
+At home page tap in search bar and type any word that you want to search in note and click on search button.
+This will display all list of notes containing your search key. from the search list click in the middle of any notes.
 
-```sh
-npm run dev
-```
 
-This starts your app in development mode, rebuilding assets on file changes.
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
-
-### Using a Template
-
-When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
-
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npx create-remix@latest
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
-```

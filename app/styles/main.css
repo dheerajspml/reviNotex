@@ -3,26 +3,9 @@
 }
 
 :root {
-  --color-primary-10: #e7cffe;
-  --color-primary-50: #dcbcfb;
-  --color-primary-100: #ca97fc;
-  --color-primary-200: #b779f4;
-  --color-primary-300: #a85ff0;
-  --color-primary-400: #8f42dd;
-  --color-primary-500: #8d34e6;
-  --color-primary-600: #8021e0;
-  --color-primary-700: #690fc3;
-  --color-primary-800: #4e0596;
-  --color-primary-900: #cce6ff;
-  --color-primary-1000: #bcd5ee;
-
   --color-secondary-50: hsl(24, 93%, 83%);
   --color-secondary-100: hsl(24, 91%, 75%);
   --color-secondary-200: hsl(24, 96%, 68%);
-  --color-secondary-300: hsl(24, 96%, 61%);
-  --color-secondary-400: hsl(24, 96%, 53%);
-  --color-secondary-500: hsl(24, 100%, 50%);
-  --color-secondary-600: hsl(22, 90%, 50%);
 }
 
 body {
@@ -32,11 +15,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(
-    ellipse at top,
-    var(--color-primary-900),
-    var(--color-primary-50)
-  );
+  background-color:#fff;
   min-height: 100vh;
 }
 
@@ -57,7 +36,7 @@ body {
 
 .nav-item a {
   text-decoration: none;
-  color: var(--color-primary-10);
+
 }
 
 .nav-item a:hover,
@@ -70,7 +49,6 @@ body {
   margin: 3rem auto;
   padding: 2rem;
   text-align: center;
-  background-color: var(--color-secondary-100);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
 }
@@ -107,18 +85,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* This ensures the content takes up the full viewport height */
+  height: 100vh;
 }
 .centered-content {
   text-align: center;
 }
 .custom-h1 {
-  color: #3366cc; /* Choose your desired color */
+  color: #3366cc;
 }
 .custom-p {
-  color: #ff9900; /* Choose your desired color */
+  color: #ff9900; 
 }
 
-.footer{
-
-}

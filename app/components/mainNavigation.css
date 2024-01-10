@@ -1,28 +1,28 @@
 #main-navigation {
-  background-color: rgb(182, 209, 218); /* Set background color */
-  padding: 2rem; /* Add padding for spacing */
+  background-color: rgb(182, 209, 218); 
+  padding: 2rem;
 }
 #main-navigation ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between; /* Align items horizontally with space between */
+  justify-content: space-between;
 }
 #main-navigation li {
   margin: 0;
 }
 #main-navigation a {
   text-decoration: none;
-  color: hsla(0, 9%, 4%, 0.847); /* Set text color */
+  color: hsla(0, 9%, 4%, 0.847); 
   font-weight: bold;
 }
 #main-navigation a:hover {
-  text-decoration: underline; /* Add underline on hover */
+  text-decoration: underline; 
 }
 .btn {
-  background-color: #007bff; /* Set button background color */
-  color: #fff; /* Set button text color */
+  background-color: #007bff; 
+  color: #fff; 
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -31,6 +31,13 @@
 .logout {
   position: absolute;
   right: 0;
+  top: 0;
+  margin: 1rem;
+}
+
+.mynote{
+  position: absolute;
+  left: 0;
   top: 0;
   margin: 1rem;
 }

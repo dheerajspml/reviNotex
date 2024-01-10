@@ -17,7 +17,7 @@ export async function action({ request, params }) {
       subjectId: params.subjectId,
     },
   });
-  return redirect(`/myNotes/${params.subjectId}`);
+  return redirect(`/myNote/${params.subjectId}`);
 }
 
 export default function SubjectPage() {
@@ -38,7 +38,7 @@ export default function SubjectPage() {
           folders.map((folder) => (
             <div key={folder.id} className="subject-item">
               <img src={folderIcon} alt="Folder Icon" className="folder-icon" />
-              <Link to={folder.id}>{folder.name}</Link>
+              <Link  to={folder.id}><span className="subject-name">{folder.name}</span></Link>
             </div>
           ))
         )}
@@ -68,7 +68,9 @@ export const loader = async ({ params }) => {
   try {
     const subjectId = params.subjectId; // Extract subjectId from params
     const folders = await db.folder.findMany({
-      where: { subjectId: subjectId },
+      where: { subjectId: subjectId ,
+               parentId:null,
+      },
       select: { id: true, name: true },
     });
     if (!folders || folders.length === 0) {

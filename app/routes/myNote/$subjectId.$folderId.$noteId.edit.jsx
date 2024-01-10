@@ -13,7 +13,6 @@ export async function loader({ params }) {
       id: noteId,
     },
   });
-  console.log("selectedNote " + selectedNote);
   if (!selectedNote) {
     return { message: `Note with id ${noteId} not found.` };
   }
@@ -26,8 +25,10 @@ export default function EditNotes() {
   const params = useParams();
 
   return (
-    <Form method="PUT" id="note-form">
-      {data?.message && <p>{data.message}</p>}
+    <div>
+<Form method="PUT" id="note-form">
+        <div>
+        {data?.message && <p>{data.message}</p>}
       <p>
         <label htmlFor="title">Title</label>
         <input
@@ -54,7 +55,7 @@ export default function EditNotes() {
           defaultValue={selectedNote.content}
           id="content"
           name="content"
-          rows="15"
+          rows="10"
           required
         />
       </p>
@@ -63,14 +64,19 @@ export default function EditNotes() {
           Save
         </button>
         <Link
-          to={`/myNotes/${params.subjectId}/${params.folderId}/${params.noteId}`}
+          to={`/myNote/${params.subjectId}/${params.folderId}/${params.noteId}`}
         >
           <button className="bottom-left" type="button">
             Cancel
           </button>
         </Link>
       </div>
+        </div>
+      
+     
     </Form>
+    </div>
+    
   );
 }
 
@@ -103,7 +109,7 @@ export const action = async ({ request, params }) => {
     data: fields,
   });
   return redirect(
-    `/myNotes/${params.subjectId}/${params.folderId}/${params.noteId}`
+    `/myNote/${params.subjectId}/${params.folderId}/${params.noteId}`
   );
 };
 

@@ -22,6 +22,7 @@ export async function action({ request }) {
   });
   return redirect("/myNotes");
 }
+
 export default function MyNotePage() {
   const subjects = useLoaderData();
   return (
@@ -38,7 +39,7 @@ export default function MyNotePage() {
           subjects.map((subject) => (
             <div key={subject.id} className="subject-item">
               <img src={folderIcon} alt="Folder Icon" className="folder-icon" />
-              <Link to={subject.id}>{subject.name}</Link>
+              <Link className="subject-name" to={`/myNote/${subject.id}`}>{subject.name}</Link>
             </div>
           ))
         )}

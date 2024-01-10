@@ -1,5 +1,5 @@
 {
-  "include": ["**/*.js", "**/*.jsx", "app/utils/session.server.ts"],
+  "include": ["**/*.js", "**/*.jsx", "app/utils/session.server.ts", "app/routes/searchs/$searchTerm.$noteId.jsx"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
     "isolatedModules": true,
