@@ -1,5 +1,6 @@
+
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/bharti_dk/public_html/
-    - /bin/cp  * $DEPLOYPATH
+    - export DEPLOYPATH=/home/st45dflp24fe/public_html/
+    - /bin/cp -R images $DEPLOYPATH
