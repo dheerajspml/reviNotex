@@ -31,7 +31,6 @@ jobs:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ${{secrets.FTP_PROTOCOL}}
           localDir: 'public'
           remoteDir: 'www/public'
           options: '--verbose --ascii'
