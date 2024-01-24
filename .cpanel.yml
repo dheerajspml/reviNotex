@@ -1,6 +1,0 @@
-
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/st45dflp24fe/public_html/
-    - /bin/cp -R images $DEPLOYPATH
