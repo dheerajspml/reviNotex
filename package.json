@@ -1,4 +1,3 @@
-
 {
   "private": true,
   "sideEffects": false,
@@ -6,10 +5,10 @@
     "seed": "node prisma/seed"
   },
   "scripts": {
-  "build": "remix build",
-  "dev": "remix dev",
-  "start": "remix-serve build",
-  "bundle": "remix build"
+    "build": "remix build",
+    "dev": "remix dev",
+    "start": "remix-serve build",
+    "bundle": "remix build"
   },
   "dependencies": {
     "@prisma/client": "^5.7.0",
