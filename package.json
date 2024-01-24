@@ -8,7 +8,9 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
-    "start": "remix-serve build"
+    "start": "remix-serve build",
+  "bundle": "remix build"
+}
   },
   "dependencies": {
     "@prisma/client": "^5.7.0",
