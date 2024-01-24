@@ -20,7 +20,7 @@ jobs:
           node-version: 16
 
       - name: 📦 Install npm packages
-        run: npm install && npm run postinstall
+        run: npm install
 
       - name: 🔨 Build app and bundle
         run: npm run bundle
